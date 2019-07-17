@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// --  present Welcome view by checking DB connection
+Route::get('/', 'UserController@checkDbConnection');
+// -- click of `Backup Database` button
+Route::get('download', 'UserController@download');
+
